@@ -395,7 +395,7 @@ Popup = function () {
       }
 
       if (this.settings.triggers.open.exitIntent) {
-        DOM(document).on(`mouseleave.${this.id}`, event => {
+        DOM(document).on(`mouseout.${this.id}`, event => {
           var base, threshold;
           base = isIE || isIE11 || isEdge ? 110 : 0;
           threshold = this.settings.yThreshold + base;
@@ -443,7 +443,7 @@ Popup = function () {
       }
 
       if (this.settings.triggers.open.exitIntent) {
-        DOM(document).off(`mouseleave.${this.id}`);
+        DOM(document).off(`mouseout.${this.id}`);
       }
 
       if (this.settings.triggers.open.visibility) {
